@@ -1,0 +1,6 @@
+@NM.Core_HostAddress = http://localhost:5062
+
+GET {{NM.Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
