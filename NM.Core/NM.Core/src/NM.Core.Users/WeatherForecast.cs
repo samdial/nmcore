@@ -1,4 +1,4 @@
-namespace NM.Core
+namespace NM.Core.src.NM.Core.Users
 {
     public class WeatherForecast
     {
