@@ -1,0 +1,8 @@
+D:\OtusNM\NM.Core\NM.Core\obj\Debug\net8.0\NM.Core.csproj.AssemblyReference.cache
+D:\OtusNM\NM.Core\NM.Core\obj\Debug\net8.0\NM.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\OtusNM\NM.Core\NM.Core\obj\Debug\net8.0\NM.Core.AssemblyInfoInputs.cache
+D:\OtusNM\NM.Core\NM.Core\obj\Debug\net8.0\NM.Core.AssemblyInfo.cs
+D:\OtusNM\NM.Core\NM.Core\obj\Debug\net8.0\NM.Core.csproj.CoreCompileInputs.cache
+D:\OtusNM\NM.Core\NM.Core\obj\Debug\net8.0\NM.Core.MvcApplicationPartsAssemblyInfo.cs
+D:\OtusNM\NM.Core\NM.Core\obj\Debug\net8.0\NM.Core.MvcApplicationPartsAssemblyInfo.cache
+D:\OtusNM\NM.Core\NM.Core\obj\Debug\net8.0\NM.Core.sourcelink.json
