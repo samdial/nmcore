@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using System;
+using NM.Core.src.NM.Core.Database.Models;
+using NM.Core.src.NM.Core.Users.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using NM.Core.Database.Models; 
-using NM.Core.Database.Services; 
 
 namespace NM.Core.Users.Controllers
 {
@@ -12,7 +11,7 @@ namespace NM.Core.Users.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly IUserService _userService; 
+        private readonly IUserService _userService;
 
         public UserController(IUserService userService)
         {
@@ -20,6 +19,7 @@ namespace NM.Core.Users.Controllers
         }
 
         [HttpGet]
+        [ActionName(nameof(GetAllAsync))]
         public async Task<ActionResult<IEnumerable<User>>> GetAllAsync(CancellationToken cancellationToken)
         {
             var users = await _userService.GetAllAsync(cancellationToken);
@@ -27,6 +27,7 @@ namespace NM.Core.Users.Controllers
         }
 
         [HttpGet("{id}")]
+        [ActionName(nameof(GetByIdAsync))]
         public async Task<ActionResult<User>> GetByIdAsync(int id, CancellationToken cancellationToken)
         {
             var user = await _userService.GetByIdAsync(id, cancellationToken);
@@ -40,6 +41,7 @@ namespace NM.Core.Users.Controllers
         }
 
         [HttpPost]
+        [ActionName(nameof(CreateAsync))]
         public async Task<ActionResult<User>> CreateAsync(User user, CancellationToken cancellationToken)
         {
             var createdUser = await _userService.CreateAsync(user, cancellationToken);
@@ -47,6 +49,7 @@ namespace NM.Core.Users.Controllers
         }
 
         [HttpPut("{id}")]
+        [ActionName(nameof(UpdateAsync))]
         public async Task<ActionResult<User>> UpdateAsync(int id, User user, CancellationToken cancellationToken)
         {
             var updatedUser = await _userService.UpdateAsync(id, user, cancellationToken);
@@ -60,6 +63,7 @@ namespace NM.Core.Users.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ActionName(nameof(DeleteAsync))]
         public async Task<ActionResult<User>> DeleteAsync(int id, CancellationToken cancellationToken)
         {
             var deletedUser = await _userService.DeleteAsync(id, cancellationToken);
